@@ -1,5 +1,9 @@
 import { recipes } from '../data/ingredients';
-import { findIngredient, findIngredients, findSubstitutions } from '../api/ingredients';
+import {
+  findIngredient,
+  findIngredients,
+  findSubstitutions,
+} from '../api/ingredients';
 
 const resolvers = {
   Query: {
@@ -25,11 +29,11 @@ const resolvers = {
   Ingredient: {
     substitutions: (obj, args, context, info) => {
       // Use the data that's already in the ingredient
-      const {name} = obj;
+      const { name } = obj;
 
       return findSubstitutions(name);
     },
-  }
+  },
 };
 
 export default resolvers;
