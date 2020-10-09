@@ -52,5 +52,7 @@ export const findSubstitutions = (
   });
 
   // Filter out any nulls from above
-  return newIngredients.filter((i) => Boolean(i)) as Ingredient['substitutions'];
+  return newIngredients.filter((i) =>
+    Boolean(i),
+  ) as Ingredient['substitutions'];
 };
