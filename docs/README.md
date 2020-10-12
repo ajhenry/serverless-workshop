@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./docs/logo.jpg" />
+  <img src="./resources/logo.jpg" />
 </p>
 
 <h4 align="center">A workshop for demonstrating the power of GraphQL and Serverless.</h4>
