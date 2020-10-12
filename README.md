@@ -1,6 +1,6 @@
 <p align="center">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
   <img src="./docs/resources/logo.jpg" />
 </p>
@@ -42,6 +42,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/AJHenry"><img src="https://avatars1.githubusercontent.com/u/24923406?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrew</b></sub></a><br /><a href="https://github.com/AJHenry/serverless-workshop/commits?author=AJHenry" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/nicksmider"><img src="https://avatars2.githubusercontent.com/u/14203204?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nicholas Smider</b></sub></a><br /><a href="https://github.com/AJHenry/serverless-workshop/commits?author=nicksmider" title="Documentation">📖</a></td>
   </tr>
 </table>
 
