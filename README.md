@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="#quick-start">Quick Start</a> •
-  <a href="#">Documentation</a> •
+  <a href="https://ajhenry.github.io/serverless-workshop/">Documentation</a> •
   <a href="#contributors-✨">Credits</a> •
   <a href="#license">License</a>
 </p>
