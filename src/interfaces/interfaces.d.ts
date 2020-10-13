@@ -1,4 +1,5 @@
 export type Unit =
+  | 'lb'
   | 'unit'
   | 'oz'
   | 'g'
@@ -11,7 +12,8 @@ export type Unit =
   | 'dash'
   | 'pinch'
   | 'gal'
-  | 'oz';
+  | 'oz'
+  | 'pt';
 
 export type Substitution = {
   ingredient1: string;
@@ -34,7 +36,11 @@ export interface NutritionFacts {}
 export interface Recipe {
   title: string;
   description: string;
-  ingredients: (Pick<Ingredient, 'name'> & { amount: number; unit: Unit })[];
+  ingredients: (Pick<Ingredient, 'name'> & {
+    amount: number;
+    unit: Unit;
+    modifier?: string;
+  })[];
   steps: string[];
   nutrition?: NutritionFacts;
   duration: {

@@ -7,10 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "serverless offline",
     "lint": "eslint --fix .",
-    "pretty": "prettier --write \"**/*.{ts,json}\""
+    "pretty": "prettier --write \"**/*.{ts,json}\"",
+    "docs": "docsify serve --port 4000",
+    "gen:ingredients": "ts-node ./src/util/util.ts"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "apollo-server-lambda": "^2.18.2",
     "dotenv": "^8.2.0",
@@ -19,13 +21,16 @@
     "jsonwebtoken": "^8.5.1",
     "serverless": "^1.83.0",
     "serverless-offline": "^6.8.0",
+    "uuid": "^8.3.1",
     "winston": "^3.3.3"
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^8.3.5",
     "@types/node": "^14.11.7",
+    "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/parser": "^3.10.1",
+    "docsify-cli": "^4.4.1",
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-config-standard": "^14.1.1",
@@ -39,6 +44,7 @@
     "prettier": "^2.1.2",
     "serverless-dotenv-plugin": "^2.1.1",
     "serverless-plugin-typescript": "^1.1.9",
+    "ts-node": "^9.0.0",
     "typescript": "^3.9.7"
   },
   "husky": {

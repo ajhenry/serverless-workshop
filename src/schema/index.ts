@@ -54,9 +54,9 @@ const typeDefs = gql`
 
   type Query {
     hello(name: String): String!
-    recipe(search: String): [Recipe]!
+    recipes(search: String): [Recipe]!
     ingredient(id: String): Ingredient
-    ingredients(search: String): [Ingredient]
+    ingredients(search: String): [Ingredient]!
   }
 `;
 
