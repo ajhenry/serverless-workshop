@@ -5,6 +5,7 @@ import {
   findSubstitutions,
 } from '../api/ingredients';
 import { findRecipes } from '../api/recipes';
+import { convertToMetric } from '../util/convert';
 
 const resolvers = {
   Query: {
@@ -33,6 +34,20 @@ const resolvers = {
       const { name } = obj;
 
       return findSubstitutions(name);
+    },
+  },
+  Recipe: {
+    ingredients: (obj, args, context, info) => {
+      // Use the data that's already in the ingredient
+      const { metric } = args;
+      const { ingredients } = obj;
+
+      console.log(metric);
+      console.log(ingredients);
+
+      if (metric) return convertToMetric(ingredients);
+
+      return ingredients;
     },
   },
 };

@@ -29,7 +29,7 @@ const typeDefs = gql`
 
   extend type Ingredient {
     amount: Float
-    unit: Unit
+    unit: String
   }
 
   extend type Ingredient {
@@ -45,7 +45,7 @@ const typeDefs = gql`
   type Recipe {
     title: String!
     description: String!
-    ingredients: [Ingredient]!
+    ingredients(metric: Boolean): [Ingredient]!
     steps: [String]!
     nutrition: NutritionFacts
     duration: Duration
