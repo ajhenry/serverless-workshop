@@ -1,0 +1,35 @@
+{
+  "projectName": "serverless-workshop",
+  "projectOwner": "AJHenry",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "badgeTemplate": "<a href=\"#contributors\"><img src=\"https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg?style=flat-square\"></a>",
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "AJHenry",
+      "name": "Andrew",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/24923406?v=4",
+      "profile": "https://github.com/AJHenry",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "nicksmider",
+      "name": "Nicholas Smider",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/14203204?v=4",
+      "profile": "https://github.com/nicksmider",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}

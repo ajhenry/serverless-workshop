@@ -112,3 +112,5 @@ logs/
 
 
 firebase-config.json
+
+.DS_Store
