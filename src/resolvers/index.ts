@@ -1,19 +1,20 @@
-import { recipes } from '../data/ingredients';
+import { recipes } from '../data/recipes';
 import {
   findIngredient,
   findIngredients,
   findSubstitutions,
 } from '../api/ingredients';
+import { findRecipes } from '../api/recipes';
 
 const resolvers = {
   Query: {
     hello: (obj, args, context, info) => {
       return 'world';
     },
-    recipe: (obj, args, context, info) => {
+    recipes: (obj, args, context, info) => {
       const { search } = args;
 
-      return recipes;
+      return findRecipes(search);
     },
     ingredient: (obj, args, context, info) => {
       const { id } = args;
