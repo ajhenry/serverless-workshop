@@ -114,3 +114,5 @@ logs/
 firebase-config.json
 
 .DS_Store
+
+mykeyfile.json.enc

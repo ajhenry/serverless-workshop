@@ -1,7 +1,20 @@
-service: aws-apollo-lambda
+service: apollo-lambda
+
 provider:
-  name: aws
+  name: google
   runtime: nodejs8.10
+  project: my-project-1234 #google account project name
+  credentials: ~/.gcloud/keyfile.json # path must be absolute
+
+package:
+  exclude:
+    - node_modules/**
+    - .gitignore
+    - .git/**
+
+plugins:
+  - serverless-google-cloudfunctions
+
 functions:
   graphql:
     # this is formatted as <FILENAME>.<HANDLER>
@@ -15,13 +28,3 @@ functions:
           path: graphql
           method: get
           cors: true
-
-custom:
-  serverless-offline:
-    httpPort: 3000
-    port: 3000
-    noPrependStageInUrl: true
-
-plugins:
-  - serverless-offline
-  - serverless-plugin-typescript
