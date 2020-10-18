@@ -8,7 +8,7 @@
     "start": "serverless offline",
     "lint": "eslint --fix .",
     "pretty": "prettier --write \"**/*.{ts,json}\"",
-    "docs": "docsify serve --port 4000",
+    "docs": "docsify serve ./docs/ --port 4000",
     "gen:ingredients": "ts-node ./src/util/util.ts"
   },
   "author": "",
@@ -43,6 +43,7 @@
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "serverless-dotenv-plugin": "^2.1.1",
+    "serverless-google-cloudfunctions": "^3.1.1",
     "serverless-plugin-typescript": "^1.1.9",
     "ts-node": "^9.0.0",
     "typescript": "^3.9.7"
