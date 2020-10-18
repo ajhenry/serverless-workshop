@@ -5,8 +5,7 @@
 <h4 align="center">A workshop for demonstrating the power of GraphQL and Serverless.</h4>
 
 <p align="center">
-  <a href="#how-to-use">Quick Start</a> •
-  <a href="#download">Documentation</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#license">License</a>
+  <a href="#introduction?id=tldr">Quick Start</a> •
+  <a href="#serverless-concepts">Serverless Intro</a> •
+  <a href="#graphql-concepts">GraphQL Tutorial</a>
 </p>
