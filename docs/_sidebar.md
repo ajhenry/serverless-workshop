@@ -1,6 +1,8 @@
+<a href="https://ajhenry.github.io/serverless-workshop/">
 <p align="center">
   <img src="/resources/logo.jpg" />
 </p>
+</a>
 
 - Getting started
 
