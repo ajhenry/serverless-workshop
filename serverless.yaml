@@ -1,7 +1,7 @@
 service: aws-apollo-lambda
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs12.x
 functions:
   graphql:
     # this is formatted as <FILENAME>.<HANDLER>
