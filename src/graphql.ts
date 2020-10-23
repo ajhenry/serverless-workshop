@@ -5,6 +5,9 @@ import typeDefs from './schema';
 import './util/env';
 import { logger } from './util/logger';
 
+const endpoint: string = process.env.STAGE
+  ? `${process.env.STAGE}/graphql`
+  : '/graphql';
 // Create the Apollo Server
 const server = new ApolloServer({
   typeDefs,
@@ -22,7 +25,9 @@ const server = new ApolloServer({
     return err;
   },
   tracing: true,
-  playground: true,
+  playground: {
+    endpoint,
+  },
 });
 
 // Export the handler for use on the lambda
