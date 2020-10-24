@@ -4,7 +4,7 @@ This guide will walk you through deploying your code to AWS
 
 ## AWS
 
-This guide is going to provide everything you need to deploy this codebase to Google Cloud and let it listen to HTTP requests
+This guide is going to provide everything you need to deploy this codebase to AWS and let it listen to HTTP requests
 
 This project already has the files you need for serverless framework and CloudFormation to work properly.
 
