@@ -12,11 +12,11 @@ Everything used should fall under the free tier of AWS, but it is best practice 
 
 ### Setting up your AWS account
 1. [Setup AWS Account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
-   
+
    - [Set up billing alert](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html)
 
 2. [Create a new IAM user with programmatic access](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console)
-   
+
    - Save the Access Keys for the account 
 3. [Configure AWS on your local machine](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
 
