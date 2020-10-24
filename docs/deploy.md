@@ -82,7 +82,7 @@ This is an [API Gateway](https://aws.amazon.com/api-gateway/) endpoint that will
 
 ### Tear Down
 
-It's a good idea to remove deployments that you do not intend to keep up. This can be down easily with serverless.
+It's a good idea to remove deployments that you do not intend to keep up. This can be done easily with serverless.
 
 ```bash
 serverless remove
