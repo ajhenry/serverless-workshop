@@ -68,4 +68,26 @@ layers:
   None
 ```
 
+### Architecture
+
+Serverless will deploy multiple AWS services as part of a [CloudFormation](https://aws.amazon.com/cloudformation/) template.
+
+You can  invoke the lambda and view the deployed lambda using the endpoints that serverless gives you: `https://<uniqueID>.execute-api.us-east-1.amazonaws.com/dev/graphql`
+
+This is an [API Gateway](https://aws.amazon.com/api-gateway/) endpoint that will invoke the lambda `aws-apollo-lambda-dev-graphql`.
+
+<p align="center">
+  <img src="./resources/api_gateway_lambda.png" />
+</p>
+
+### Tear Down
+
+It's a good idea to remove deployments that you do not intend to keep up. This can be done easily with serverless.
+
+```bash
+serverless remove
+```
+
+Verify the removal in AWS Console. 
+
 [Official Docs](https://www.serverless.com/framework/docs/providers/aws/guide/deploying/)
