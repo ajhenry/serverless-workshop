@@ -34,6 +34,7 @@ export interface Ingredient {
 export interface NutritionFacts {}
 
 export interface Recipe {
+  id: string;
   title: string;
   description: string;
   ingredients: (Pick<Ingredient, 'name'> & {

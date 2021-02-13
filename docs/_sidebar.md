@@ -1,4 +1,4 @@
-<a href="https://ajhenry.github.io/serverless-workshop/">
+<a href="/">
 <p align="center">
   <img src="./resources/logo.jpg" />
 </p>
