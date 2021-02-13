@@ -9,24 +9,24 @@ import { recipes } from '../data/recipes';
  * @param recipes List of recipes
  */
 export const generateIngredients = (recipes: Recipe[]): Ingredient[] => {
-  const ingredientList: Ingredient[] = [];
-  const ingredients = {};
+    const ingredientList: Ingredient[] = [];
+    const ingredients = {};
 
-  for (const recipe of recipes) {
-    for (const ingredient of recipe.ingredients) {
-      if (!ingredients.hasOwnProperty(ingredient.name)) {
-        const uuid = uuidv4();
-        ingredients[ingredient.name] = uuid;
+    for (const recipe of recipes) {
+        for (const ingredient of recipe.ingredients) {
+            if (!ingredients.hasOwnProperty(ingredient.name)) {
+                const uuid = uuidv4();
+                ingredients[ingredient.name] = uuid;
 
-        ingredientList.push({
-          name: ingredient.name,
-          id: uuid,
-        });
-      }
+                ingredientList.push({
+                    name: ingredient.name,
+                    id: uuid,
+                });
+            }
+        }
     }
-  }
 
-  return ingredientList;
+    return ingredientList;
 };
 
 console.log(JSON.stringify(generateIngredients(recipes), null, 2));
