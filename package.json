@@ -16,10 +16,11 @@
   "dependencies": {
     "apollo-server-lambda": "^2.18.2",
     "dotenv": "^8.2.0",
+    "fuse.js": "^6.4.6",
     "graphql": "^15.3.0",
     "graphql-tag": "^2.11.0",
     "jsonwebtoken": "^8.5.1",
-    "serverless": "^1.83.0",
+    "serverless": "^2.23.0",
     "serverless-offline": "^6.8.0",
     "uuid": "^8.3.1",
     "winston": "^3.3.3"

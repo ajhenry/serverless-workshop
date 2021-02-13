@@ -1,13 +1,16 @@
 import {
-    findIngredientById,
+    convertAmounts, findIngredientById,
     findIngredients,
     findSubstitutions,
-    getAllIngredients,
-    convertAmounts,
+    getAllIngredients
 } from '../api/ingredients';
-import { findRecipes, getAllRecipes, getRecipeById } from '../api/recipes';
+import {
+    findRecipes,
+    findRelated,
+    getAllRecipes,
+    getRecipeById
+} from '../api/recipes';
 import { Recipe } from '../interfaces/interfaces';
-import { ingredients } from '../data/ingredients';
 
 const resolvers = {
     Query: {
@@ -49,11 +52,28 @@ const resolvers = {
     },
     Mutation: {
         updateRecipe: (obj, args, context, info) => {
-            const { id, data } = args;
+            const { id, data, replace } = args;
+
+            if (replace) {
+                return {
+                    id,
+                    steps: [],
+                    description: '',
+                    ingredients: [],
+                    ...data,
+                };
+            }
 
             const recipe = getRecipeById(id);
 
             return { ...recipe, ...data };
+        },
+        deleteRecipe: (obj, args, context, info) => {
+            const { id } = args;
+
+            const recipe = getRecipeById(id);
+
+            return recipe;
         },
     },
     Ingredient: {
@@ -66,17 +86,23 @@ const resolvers = {
     },
     Recipe: {
         ingredients: (obj: Recipe, args, context, info) => {
-            
-
             const { multiply } = args;
 
             if (!multiply) return obj.ingredients;
 
-
             const newIngredients = convertAmounts(obj.ingredients, multiply);
 
-
             return newIngredients;
+        },
+        related: (recipe: Recipe, args, context, info) => {
+            const { limit } = args;
+            const related = findRelated(recipe);
+
+            if (limit) {
+                return related.slice(0, limit);
+            }
+
+            return related;
         },
     },
 };

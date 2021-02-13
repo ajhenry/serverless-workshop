@@ -1,6 +1,6 @@
 import { recipes } from '../data/recipes';
 import { Recipe } from '../interfaces/interfaces';
-
+import Fuse from 'fuse.js';
 /**
  * Find recipes by a search term
  * @param search Search term
@@ -26,4 +26,24 @@ export const getRecipeById = (id: string): Recipe | undefined => {
  */
 export const getAllRecipes = (): Recipe[] => {
     return recipes;
+};
+
+/**
+ * Finds related recipes for a given recipe
+ * @param recipe Recipe to find related to
+ */
+export const findRelated = (recipe: Recipe): Recipe[] => {
+    const title = recipe.title;
+    const recipes = getAllRecipes();
+    const options = {
+        includeScore: false,
+        keys: ['title', 'steps'],
+    };
+
+    const fuse = new Fuse(recipes, options);
+    const result = fuse.search(recipe.title);
+
+    return result
+        .map((result) => result.item)
+        .filter((recipe) => recipe.title !== title);
 };

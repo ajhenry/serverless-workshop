@@ -53,6 +53,7 @@ const typeDefs = gql`
         nutrition: NutritionFacts
         duration: Duration
         yield: Int
+        related(limit: Int): [Recipe]!
     }
 
     type Query {
@@ -83,7 +84,8 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        updateRecipe(id: ID, data: RecipeInput): Recipe
+        updateRecipe(id: ID, data: RecipeInput, replace: Boolean): Recipe
+        deleteRecipe(id: ID): Recipe
     }
 `;
 
