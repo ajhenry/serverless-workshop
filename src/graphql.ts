@@ -6,7 +6,7 @@ import './util/env';
 import { logger } from './util/logger';
 
 const endpoint: string = process.env.STAGE
-  ? `${process.env.STAGE}/graphql`
+  ? `/${process.env.STAGE}/graphql`
   : '/graphql';
 // Create the Apollo Server
 const server = new ApolloServer({
